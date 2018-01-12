@@ -126,57 +126,8 @@ clear especially the first image. But my model classified all of them
 perfectly as can be seen in my jupyter notebook, hence giving accuracy of
 100%
 
-3. Describe how certain the model is when predicting on each of the five
-new images by looking at the softmax probabilities for each prediction.
-Provide the top 5 softmax probabilities for each image along with the
-sign type of each probability.
-Image Prediction
 
-15(No vehicles) 15
-12 (Priority road) 12
-37(Go straight of left) 37
-31(Wild animals crossing) 31
-35 (Ahead only) 35
 
-Model predicted all the images correctly giving accuracy of 100%
 
-Top 5 softmax probabilities of each image
-Image 1 top 5 softmax pr Image Index
 
-0.993 15
-0 2
-0 3
-0 12
-0 13
 
-Image 2 top 5 softmax pr Image Index
-
-0.956 12
-0 13
-0 40
-0 15
-0 9
-
-Image 3 top 5 softmax pr Image Index
-
-0.987 37
-0 40
-0 39
-0 33
-0 4
-
-Image 4 top 5 softmax pr Image Index
-
-0.793 31
-0.134 21
-0 24
-0 2
-0 29
-
-Image 5 top 5 softmax pr Image Index
-
-0.992 35
-0 3
-0 12
-0 13
-0 9
