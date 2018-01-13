@@ -28,11 +28,12 @@ signs data set:
  The number of unique classes/labels in the data set is 43
 
 2. Include an exploratory visualization of the dataset.
+
 Here is an exploratory visualization of the data set. It contains 3
 histograms showing distribution of classes. Y-axis is number of examples
-and x-axis is class of images
-The number of images in training set is greater than validation and test
+and x-axis is class of images. The number of images in training set is greater than validation and test
 set, but distribution as per classes is quite symmetrical
+
 Design and Test a Model Architecture
 
 1. Describe how you preprocessed the image data. What techniques were
@@ -56,6 +57,7 @@ axis to the images. Image shape was converted from 32x32 to
 2. Describe what your final model architecture looks like including model
 type, layers, layer sizes, connectivity, etc. Consider including a
 diagram and/or table describing the final model.
+
 My final model consisted of the following layers:
 Layer Description
 
@@ -84,6 +86,7 @@ n_examples x 43 (logits)
 3. Describe how you trained your model. The discussion can include the
 type of optimizer, the batch size, number of epochs and any hyper
 parameters such as learning rate.
+
 To train the model, I used Adam optimizer, batch size of 128, number of
 epochs equal to 10 and learning rate of 0.001. To prevent over-fitting, I
 used L2 regularisation technique and added convolution1 and convolution2
@@ -99,6 +102,7 @@ process, in which case, outline the steps you took to get to the final
 solution and why you chose those steps. Perhaps your solution involved an
 already well known implementation or architecture. In this case, discuss
 why you think the architecture is suitable for the current problem.
+
 My final model results were:
 
  training set accuracy of 97.4%
@@ -113,6 +117,7 @@ after 1st and 2nd full connected layers where dropped. And in L2
 regularisation, weights of conv1 and conv2 layers were added to cost
 function. This put restriction on weights to take very high value. These
 measures prevented over-fitting and hence I got the desired accuracy.
+
 Test a Model on New Images
 
 1. Choose five German traffic signs found on the web and provide them in
