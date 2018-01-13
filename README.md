@@ -1,5 +1,5 @@
 
-Please refer to Project Writeup and Video for more detail of work done
+Please refer to Project Writeup and ipynb file for more detail of work done
 
 # Self-Driving-Car-Project2
 Traffic Sign Recognition
