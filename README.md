@@ -136,9 +136,9 @@ regularisation, weights of conv1 and conv2 layers were added to cost
 function. This put restriction on weights to take very high value. These
 measures prevented over-fitting and hence I got the desired accuracy.
 
-####Test a Model on New Images
+###Test a Model on New Images
 
-1. Choose five German traffic signs found on the web and provide them in
+####1. Choose five German traffic signs found on the web and provide them in
 the report. For each image, discuss what quality or qualities might be
 difficult to classify.
  
