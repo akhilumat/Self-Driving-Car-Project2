@@ -2,12 +2,12 @@
 Please refer to Project Writeup and ipynb file for more detail of work done
 
 # Self-Driving-Car-Project2
-Traffic Sign Recognition
-Write-up
+##Traffic Sign Recognition
+##Write-up
 
-Build a Traffic Sign Recognition Project
+##Build a Traffic Sign Recognition Project
 
-The goals / steps of this project are the following:
+##The goals / steps of this project are the following:
 
  Load the data set
  Explore, summarize and visualize the data set
@@ -16,8 +16,9 @@ The goals / steps of this project are the following:
  Analyze the softmax probabilities of the new images
  Summarize the results with a written report
 
-Data Set Summary & Exploration
-1. Provide a basic summary of the data set. In the code, the analysis
+###Data Set Summary & Exploration
+
+####1. Provide a basic summary of the data set. In the code, the analysis
 should be done using python, numpy and/or pandas methods rather than
 hardcoding results manually.
 
@@ -30,16 +31,16 @@ signs data set:
  The shape of a traffic sign image is (32,32,3)
  The number of unique classes/labels in the data set is 43
 
-2. Include an exploratory visualization of the dataset.
+####2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It contains 3
 histograms showing distribution of classes. Y-axis is number of examples
 and x-axis is class of images. The number of images in training set is greater than validation and test
 set, but distribution as per classes is quite symmetrical
 
-Design and Test a Model Architecture
+###Design and Test a Model Architecture
 
-1. Describe how you preprocessed the image data. What techniques were
+####1. Describe how you preprocessed the image data. What techniques were
 chosen and why did you choose these techniques? Consider including images
 showing the output of each preprocessing technique. Pre-processing refers
 to techniques such as converting to grayscale, normalization, etc.
@@ -48,16 +49,18 @@ to techniques such as converting to grayscale, normalization, etc.
 because they take lesser number of bits to represent and make our
 calculations fast. Also color has no usage to identify the features
 in the image.
+
 Here is an example of a traffic sign image after grayscaling.
  Then I normalized the image data to make the scale of all the
 features similar. This helps in the learning process. To normalize
 data I subtracted 128 from each pixel value and then divided it by
 128.
+
  To make the data compatible with the lenet function, I added a new
 axis to the images. Image shape was converted from 32x32 to
 32x32x1.
 
-2. Describe what your final model architecture looks like including model
+####2. Describe what your final model architecture looks like including model
 type, layers, layer sizes, connectivity, etc. Consider including a
 diagram and/or table describing the final model.
 
@@ -65,28 +68,38 @@ My final model consisted of the following layers:
 Layer Description
 
 Input 32x32x1 Gray image
+
 Convolution 5x5 1x1 stride, valid padding, outputs
 28x28x6
+ 
  RELU
+ 
  Max pooling 2x2 stride, valid padding, outputs
 14x14x6
+
 Convolution 5x5 1x1 stride, valid padding, outputs
 10x10x16
- RELU
+
+RELU
+ 
  Max pooling 2x2 stride, valid padding, outputs
 5x5x16
+
 Fully Connected Input is flattened, output is
 n_examples x 120
+ 
  RELU
  Dropout 35% values dropped to prevent overfitting
 Fully Connected Input is flattened, output is
 n_examples x 84
  RELU
+ 
  Dropout 35% values dropped to prevent overfitting
+
 Fully Connected Input is flattened, output is
 n_examples x 43 (logits)
 
-3. Describe how you trained your model. The discussion can include the
+####3. Describe how you trained your model. The discussion can include the
 type of optimizer, the batch size, number of epochs and any hyper
 parameters such as learning rate.
 
@@ -97,7 +110,7 @@ weights l2 loss to the operation loss. This will put restriction on conv1
 conv2 weight to take high values. Another technique used to get the
 desired results was dropout.
 
-4. Describe the approach taken for finding a solution and getting the
+####4. Describe the approach taken for finding a solution and getting the
 validation set accuracy to be at least 0.93. Include in the discussion
 the results on the training, validation and test sets and where in the
 code these were calculated. Your approach may have been an iterative
@@ -109,7 +122,9 @@ why you think the architecture is suitable for the current problem.
 My final model results were:
 
  training set accuracy of 97.4%
+
  validation set accuracy of 93.3%
+
  test set accuracy of 100%
 
 To get 93% validation accuracy Lenet architecture was used. But using
@@ -121,12 +136,11 @@ regularisation, weights of conv1 and conv2 layers were added to cost
 function. This put restriction on weights to take very high value. These
 measures prevented over-fitting and hence I got the desired accuracy.
 
-Test a Model on New Images
+####Test a Model on New Images
 
 1. Choose five German traffic signs found on the web and provide them in
 the report. For each image, discuss what quality or qualities might be
 difficult to classify.
-Here are five German traffic signs that I found on the web:
  
 I converted images to gray so that they are easy to classify and takes
 lesser memory. Images are difficult to classify since they are not very
