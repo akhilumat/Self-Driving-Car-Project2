@@ -90,10 +90,13 @@ Fully Connected Input is flattened, output is
 n_examples x 120
  
  RELU
- Dropout 35% values dropped to prevent overfitting
+
+Dropout 35% values dropped to prevent overfitting
+
 Fully Connected Input is flattened, output is
 n_examples x 84
- RELU
+
+RELU
  
  Dropout 35% values dropped to prevent overfitting
 
